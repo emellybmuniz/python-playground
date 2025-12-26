@@ -2,7 +2,7 @@
 
 > Um laboratório de experimentação técnica, refatoração de código e análise de dados.
 
-Este repositório documenta minha jornada de aprofundamento na linguagem Python. A estrutura foi desenhada para segregar o aprendizado da sintaxe (**lab**), a resolução de problemas lógicos e "Clean Code" (**challenges**) e a construção de aplicações com escopo definido (**mini-projects**).
+Este repositório documenta minha jornada de aprofundamento na linguagem Python. A estrutura foi desenhada para segregar o aprendizado da sintaxe (**lab**), a resolução de problemas lógicos (**challenges**) e a construção de aplicações com escopo definido (**mini-projects**).
 
 <p align="left">
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
