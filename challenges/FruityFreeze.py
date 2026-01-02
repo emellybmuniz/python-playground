@@ -97,13 +97,13 @@ def finalizar_pedido():
 
 # --- Configuração da Janela Principal (GUI) ---
 root = tk.Tk()
-root.title("Loja de Gelados da Emelly Beatriz")
+root.title("Loja de Gelados da Emelly")
 root.geometry("500x550")
 
 # --- Widgets da Interface ---
 
 # Mensagem de boas-vindas
-tk.Label(root, text="Bem-vindo(a) à Loja de Gelados da Emelly Beatriz Pereira!", font=("Arial", 14, "bold")).pack(pady=10)
+tk.Label(root, text="Bem-vindo(a) à Loja de Gelados da Emelly!", font=("Arial", 14, "bold")).pack(pady=10)
 
 # Cardápio (usando um Label com fonte monoespaçada para alinhar)
 cardapio_texto = """

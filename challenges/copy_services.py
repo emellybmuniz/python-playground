@@ -1,110 +1,110 @@
-# Mensagem de Boas-Vindas
-print('\nBem vindo(a) a Copiadora da Emelly Beatriz Pereira')
-nome_usuario = input('Para começar, digite o seu nome: ')  
-print(f'\nOlá {nome_usuario}! Entre com o tipo de serviço desejado.')
+# Welcome Message
+print('\nWelcome to Emelly Beatriz Pereira\'s Copy Service')
+user_name = input('To get started, please enter your name: ')  
+print(f'\nHello {user_name}! Please enter the type of service you want.')
 
-def menu_serviços():
+def service_menu():
     '''
-    Lista os serviços disponíveis na copiadora, exibindo os códigos de identificação, suas descrições e preços unitários
+    Lists the available services at the copy shop, displaying identification codes, their descriptions, and unit prices
     '''
-    print('DIG - Digitalização - R$ 1.10')
-    print('ICO - Impressão Colorida - R$ 1.00')
-    print('IPB - Impressão Preto e Branco - R$ 0.40')
-    print('FOT - Fotocópia - R$ 0.20 ')
+    print('DIG - Digitization - $1.10')
+    print('ICO - Color Printing - $1.00')
+    print('IPB - Black and White Printing - $0.40')
+    print('FOT - Photocopy - $0.20 ')
 
 
-def servico_extra():
+def extra_service():
     '''
-    Oferece serviços adicionais ou permite finalizar sem extras. 
-    Valida a entrada do usuário e retorna o valor adicional
+    Offers additional services or allows finishing without extras. 
+    Validates user input and returns the additional cost
     '''
-    print('\nDeseja adicionar algum serviço? ')
-    print('1 - Encadernação Simples - R$ 15.00')
-    print('2 - Encadernação Capa Dura - R$ 40.00')
-    print('3 - Não desejo mais nada')
-    adicional_escolhido = int(input('>> '))
+    print('\nWould you like to add any service? ')
+    print('1 - Simple Binding - $15.00')
+    print('2 - Hard Cover Binding - $40.00')
+    print('3 - I do not want anything else')
+    chosen_extra = int(input('>> '))
     while True:
-        try: # validando o serviço extra escolhido
-            match(adicional_escolhido):
+        try: # validating the chosen extra service
+            match(chosen_extra):
                 case 1:
-                    print('Encadernação Simples escolhida: R$ 15.00')
-                    valor_adicional = 15.00
+                    print('Simple Binding chosen: $15.00')
+                    additional_cost = 15.00
                 case 2:
-                    print('Encadernação Capa Dura escolhida: R$ 40.00')
-                    valor_adicional = 40.00
+                    print('Hard Cover Binding chosen: $40.00')
+                    additional_cost = 40.00
                 case 3:
-                    valor_adicional = 0
+                    additional_cost = 0
                     break    
                 case _:
-                    print('Opção Inválida! Por favor, tente novamente.')
+                    print('Invalid option! Please try again.')
                     continue
         except ValueError:
-            print('Opção Inválida! Por favor, tente novamente.')
+            print('Invalid option! Please try again.')
             continue
-        return valor_adicional
+        return additional_cost
     
 
-def num_paginas():
+def number_of_pages():
     '''
-    Solicita e valida o número de páginas para o serviço, no range de 1 e 2000. 
-    Calcula o desconto com base na quantidade
+    Requests and validates the number of pages for the service, in the range of 1 to 2000. 
+    Calculates the discount based on the quantity
     '''
-    max_paginas = 2000
-    min_paginas =  1
-    desconto = 0
+    max_pages = 2000
+    min_pages =  1
+    discount = 0
     
-    # Validação do número de páginas
-    numero_paginas = int(input('Entre com o número de páginas: '))     
-    while min_paginas < numero_paginas > max_paginas:
-        print('Não aceitamos tantas páginas de uma vez. \nPor favor, tente novamente. ')
-        numero_paginas = 0
-        numero_paginas = int(input('\nEntre com o número de páginas: '))  
+    # Validation of the number of pages
+    number_of_pages = int(input('Enter the number of pages: '))     
+    while min_pages < number_of_pages > max_pages:
+        print('We do not accept that many pages at once. \nPlease try again. ')
+        number_of_pages = 0
+        number_of_pages = int(input('\nEnter the number of pages: '))  
         
-        if numero_paginas <  20:
-            desconto = 0
-        elif  20 <= numero_paginas < 200:
-            desconto = 0.15
-        elif  200 <= numero_paginas < 2000:
-            desconto = 0.20
-        elif 2000 <= numero_paginas > max_paginas:
-            desconto = 0.25
+        if number_of_pages <  20:
+            discount = 0
+        elif  20 <= number_of_pages < 200:
+            discount = 0.15
+        elif  200 <= number_of_pages < 2000:
+            discount = 0.20
+        elif 2000 <= number_of_pages > max_pages:
+            discount = 0.25
         
-    return numero_paginas, desconto 
+    return number_of_pages, discount 
 
-def escolha_serviço():
+def choose_service():
     '''
-    Exibe o menu de serviços via menu_serviços() e valida a escolha do usuário. 
-    Retorna o valor unitário do serviço selecionado
+    Displays the service menu via service_menu() and validates the user's choice. 
+    Returns the unit price of the selected service
     '''
     while True:
-        menu_serviços()
-        servico_escolhido = input('>> ').upper()
+        service_menu()
+        chosen_service = input('>> ').upper()
         
-        match(servico_escolhido):
+        match(chosen_service):
             case 'DIG':
-                valor_servico = 1.10
+                service_cost = 1.10
             case 'ICO':
-                valor_servico = 1.00
+                service_cost = 1.00
             case 'IPB':
-                valor_servico = 0.40
+                service_cost = 0.40
             case 'FOT':
-                valor_servico = 0.20
+                service_cost = 0.20
             case _:
-                print('\nEscolha Inválida, entre com o tipo de serviço novamente.')
+                print('\nInvalid choice, please enter the type of service again.')
                 continue
         
-        return valor_servico
+        return service_cost
                 
-# Chamando funções
-valor_servico = escolha_serviço()
-num_paginas_escolhidas, desconto = num_paginas()
-valor_extra = servico_extra()
+# Calling functions
+service_cost = choose_service()
+chosen_pages, discount = number_of_pages()
+extra_cost = extra_service()
 
-# Calculando total e aplicando desconto
-custo_servico = valor_servico * num_paginas_escolhidas
-total_sem_desconto = custo_servico + valor_extra
-valor_desconto = custo_servico * desconto  # Descontando  apenas no custo do serviço
-paginas_descontadas = num_paginas_escolhidas - (num_paginas_escolhidas * desconto)
+# Calculating total and applying discount
+service_total = service_cost * chosen_pages
+total_without_discount = service_total + extra_cost
+discount_value = service_total * discount  # Discounting only on the service cost
+discounted_pages = chosen_pages - (chosen_pages * discount)
 
-total = total_sem_desconto - valor_desconto  # Total final com desconto aplicado
-print(f'Total a pagar: R$ {total:.2f} (Serviço: R$ {valor_servico:.2f} * Páginas: {round(paginas_descontadas)} + Extra: R$ {valor_extra:.2f})')
+total = total_without_discount - discount_value  # Final total with discount applied
+print(f'Total to pay: $ {total:.2f} (Service: $ {service_cost:.2f} * Pages: {round(discounted_pages)} + Extra: $ {extra_cost:.2f})')
