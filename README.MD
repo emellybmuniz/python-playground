@@ -33,6 +33,7 @@ Soluções para problemas lógicos e exercícios de arquitetura de código, com 
 | **📚 Library System** | 🏗️ OOP & Logic | Sistema de gerenciamento de biblioteca e empréstimos. | [![Ver Solução](https://img.shields.io/badge/Ver%20Solução-3776AB?style=for-the-badge)](./challenges/library.py) |
 | **🏷️ Discount Calc** | 🔢 Business Logic | Algoritmo para cálculo de descontos progressivos. | [![Ver Solução](https://img.shields.io/badge/Ver%20Solução-3776AB?style=for-the-badge)](./challenges/calculate_discount.py) |
 | **❄️ Fruity Freeze** | 📜 Data Structures | Manipulação eficiente de listas e estruturas de dados básicas. | [![Ver Solução](https://img.shields.io/badge/Ver%20Solução-3776AB?style=for-the-badge)](./challenges/FruityFreeze.py) |
+| **🤖 GenAI ETL** | 🔄 ETL & IA | Simulação de fluxo ETL com dados fictícios e enriquecimento via IA Generativa. | [![Ver Solução](https://img.shields.io/badge/Ver%20Solução-3776AB?style=for-the-badge)](./challenges/generative-ai-python-etl.py) |
 
 ---
 
